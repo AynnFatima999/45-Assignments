@@ -25,7 +25,7 @@ function describe_city(city, country = "Pakistan") {
 describe_city("karachi");
 describe_city("Islamabad");
 describe_city("Tehran", "IRAN");
-describe_city("Ankara", "Turkey");
+describe_city("Ankara");
 //QUESTION 39:
 //City Names: Write a function called city_country() that takes in the name of a city and its country. The function should return a string formatted like this:
 function city_country(city, country) {

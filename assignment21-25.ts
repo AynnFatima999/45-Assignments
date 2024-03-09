@@ -1,116 +1,36 @@
 //QUESTION 21
 //They think of something you could store in a TypeScript Object. Write a program that creates Objects containing these items.
 
-interface Student { 
-    name : string,
-    age : number,
-    isPass : string,
-    city : string
 
-} ;
-
-
-const Data :Student[] = [{
+const Data: any = {
      name : "Muhammad Ali",
     age : 25,
-    isPass : "Yes",
-    city : 'Karachi'
-},
+    city : 'Karachi' ,
+    isPass : "Passed"
+    
+}
 
-{
-    name : "Sidra Iqbal",
-    age : 22,
-    isPass : "No",
-    city : 'Lahore'
 
-},
+ console.log(`Data: ${Data.name} of age ${Data.age} from ${Data.city} has ${Data.isPass} in exams.`)
 
-   {name : "Hassan Shahzaib",
-    age : 24,
-    isPass : "Yes" ,
-    city : 'Islamabad' 
-   },
+let book :any =
+    {
+    title: "Jane Eyre",
+    publishedYear : 1847,
+    author:"Charlotte Brontë"
+   }
 
-];
+   console.log(`book: ${book.title} is written by ${book.author} in ${book.publishedYear}.`)
 
-console.log(Data);
 
+   const country: any = {
+ name: "Pakistan",
+ flag_color : "green and white"
+   }
 
 
+console.log(`The flag color of ${country.name} is ${country.flag_color}`);
 
-
-
-
-//QUESTION 22:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//QUESTION 23:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//QUESTION 24:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//QUESTION 25:
 
 
 
@@ -119,20 +39,12 @@ console.log(Data);
 
 console.log('Intentional Error:')
 
-let arr = ["Apple", "Mango", "Banana"];
+let arr: string[] = ["Apple", "Mango", "Banana"];
+// intentional error by calling index that doesnt exist.
+console.log(arr[3]); //output :undefined
 
-console.log("I want to repalce Banana with Grapes");
-
-//arr.replace(2, "Apple")
-  //in this programme we can not replace string values in array. its showing an error:
-
-arr.splice(2,1, "Grapes")
-console.log(arr);
-
-
-
-
-
+//correction by calling right index:
+console.log(arr[2]); // output :banana 
 
 
 

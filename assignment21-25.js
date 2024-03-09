@@ -2,39 +2,32 @@
 //QUESTION 21
 //They think of something you could store in a TypeScript Object. Write a program that creates Objects containing these items.
 Object.defineProperty(exports, "__esModule", { value: true });
-;
-const Data = [{
-        name: "Muhammad Ali",
-        age: 25,
-        isPass: "Yes",
-        city: 'Karachi'
-    },
-    {
-        name: "Sidra Iqbal",
-        age: 22,
-        isPass: "No",
-        city: 'Lahore'
-    },
-    { name: "Hassan Shahzaib",
-        age: 24,
-        isPass: "Yes",
-        city: 'Islamabad'
-    },
-];
-console.log(Data);
-//QUESTION 22:
-//QUESTION 23:
-//QUESTION 24:
-//QUESTION 25:
+const Data = {
+    name: "Muhammad Ali",
+    age: 25,
+    city: 'Karachi',
+    isPass: "Passed"
+};
+console.log(`Data: ${Data.name} of age ${Data.age} from ${Data.city} has ${Data.isPass} in exams.`);
+let book = {
+    title: "Jane Eyre",
+    publishedYear: 1847,
+    author: "Charlotte Brontë"
+};
+console.log(`book: ${book.title} is written by ${book.author} in ${book.publishedYear}.`);
+const country = {
+    name: "Pakistan",
+    flag_color: "green and white"
+};
+console.log(`The flag color of ${country.name} is ${country.flag_color}`);
 //Question 22:
 //Intentional Error: If you haven’t received an array index error in one of your programs yet, try to make one happen. Change an index in one of your programs to produce an index error. Make sure you correct the error before closing the program.
 console.log('Intentional Error:');
 let arr = ["Apple", "Mango", "Banana"];
-console.log("I want to repalce Banana with Grapes");
-//arr.replace(2, "Apple")
-//in this programme we can not replace string values in array. its showing an error:
-arr.splice(2, 1, "Grapes");
-console.log(arr);
+// intentional error by calling index that doesnt exist.
+console.log(arr[3]);
+//correction by calling right index:
+console.log(arr[2]);
 //QUESTION 23:
 //Conditional Tests: Write a series of conditional tests. Print a statement describing each test and your prediction for the results of each test. Your code should look something like this:
 /* let car = 'subaru';

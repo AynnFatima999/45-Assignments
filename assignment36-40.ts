@@ -50,7 +50,7 @@ function describe_city (city : string  , country:string="Pakistan") {
 describe_city("karachi");
 describe_city("Islamabad");
 describe_city("Tehran" , "IRAN");
-describe_city("Ankara", "Turkey");
+describe_city("Ankara");
 
 
 
