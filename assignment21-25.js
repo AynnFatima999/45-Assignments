@@ -25,9 +25,9 @@ console.log(`The flag color of ${country.name} is ${country.flag_color}`);
 console.log('Intentional Error:');
 let arr = ["Apple", "Mango", "Banana"];
 // intentional error by calling index that doesnt exist.
-console.log(arr[3]);
+console.log(arr[3]); //output :undefined
 //correction by calling right index:
-console.log(arr[2]);
+console.log(arr[2]); // output :banana 
 //QUESTION 23:
 //Conditional Tests: Write a series of conditional tests. Print a statement describing each test and your prediction for the results of each test. Your code should look something like this:
 /* let car = 'subaru';

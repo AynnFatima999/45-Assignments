@@ -11,43 +11,25 @@ function Show_magicians(magician) {
 Show_magicians(magician_names);
 //QUESTION 42:
 //Great Magicians: Start with a copy of your program from Exercise 39. Write a function called make_great() that modifies the array of magicians by adding the phrase the Great to each magician’s name. Call show_magicians() to see that the list has actually been modified.
-magician_names = ["Dynamo", "David", "Harry", "Ricky"];
-function show_magicians(magicians) {
-    for (const magician of magicians) {
-        console.log(magician);
-    }
+function make_great(magician_names) {
+    magician_names.forEach((val) => {
+        console.log("The great" + val);
+    });
 }
-function make_great(magicians) {
-    let greatMagicians = magicians.map(magician => `the Great ${magician}`);
-    return greatMagicians;
-}
-// Modify the array to add "the Great" to each magician's name
-let greatMagicianNames = make_great(magician_names);
-// Call the function to show the orginal magician's names
-console.log("Original Magicians:");
-show_magicians(magician_names);
-// Call the function to show the great magician's names
-console.log("Great Magicians:");
-show_magicians(greatMagicianNames);
+//MODIFIED LIST:
+console.log("Modified LIST");
+make_great(magician_names);
+console.log("Original LIST");
+//ORIGINAL LIST:
+Show_magicians(magician_names);
 //QUESTION 43:
 //Unchanged Magicians: Start with your work from Exercise 40. Call the function make_great() with a copy of the array of magicians’ names. Because the original array will be unchanged, return the new array and store it in a separate array. Call show_magicians() with each array to show that you have one array of the original names and one array with the Great added to each magician’s name.
-function show_magician(magicians) {
-    for (const magician of magicians) {
-        console.log(magician);
-    }
-}
-function make_Great(magicians) {
-    const greatMagicians = magicians.map(magician => `the Great ${magician}`);
-    return greatMagicians;
-}
-// Modify the array to add "the Great" to each magician's name
-const MagicianNames = make_great(magician_names);
-// Call the function to show the orginal magician's names
-console.log("Original Magicians:");
-show_magicians(magician_names);
-// Call the function to show the great magician's names
-console.log("\nGreat Magicians:");
-show_magicians(greatMagicianNames);
+console.log("copy of array");
+let newArray = (...magician_names) => {
+    return magician_names;
+};
+Show_magicians(newArray);
+make_great(magician_names);
 //QUESTION 44:
 // Sandwiches: Write a function that accepts a array of items a person wants on a sandwich. The function should have one parameter that collects as many items as the function call provides, and it should print a summary of the sandwich that is being ordered. Call the function three times, using a different number of arguments each time.
 function makeSandwich(...ingredients) {
@@ -57,7 +39,7 @@ function makeSandwich(...ingredients) {
     else {
         console.log("Your sandwich has:");
         for (const ingredient of ingredients) {
-            console.log(`- ${ingredient}`);
+            console.log(`${ingredient}`);
         }
     }
 }

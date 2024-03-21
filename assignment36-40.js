@@ -38,17 +38,16 @@ console.log(`"${call1}" \n "${call2}" \n "${call3}"`);
 //QUESTION 40:
 //Album: Write a function called make_album() that builds a Object describing a music album.
 function make_album(artist, title, tracks) {
-    const album = {
+    let album = {
         artist,
         title,
-        tracks,
+        tracks
     };
-    if (tracks !== undefined) {
+    if (tracks) {
         album.tracks = tracks;
     }
     return album;
 }
-// Example function calls
 const album1 = make_album('Amar khan', 'Hum Tum');
 const album2 = make_album('Artist 2', 'Artist 2', 12);
 const album3 = make_album('Artist 3', 'Artist 3', 8);
