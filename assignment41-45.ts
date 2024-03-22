@@ -21,7 +21,7 @@ function Show_magicians(magician: string[]) {
 function make_great(magician_names: string[]){
 
 magician_names.forEach((val)=> {
-  console.log("The great" + val)
+   console.log("The great" + val);
 })
 }
 //MODIFIED LIST:
@@ -44,24 +44,30 @@ Show_magicians(magician_names)
 
 console.log("copy of array")
 
+ magician_names = ["Dynamo", "David", "Harry", "Ricky"]
+ function make_Great(magician: string[]) {
+  let greatMagicians : string[] = [];
+magician_names.map((magician)=> {
+greatMagicians.push(`${magician} The great`);
+});
+return greatMagicians;
+ }
+let greatMagicians = 
+make_Great(magician_names.slice());
 
-let newArray: any = (...magician_names : string[])=> {
-  return magician_names;
-}
-//modified one:
-make_great(magician_names)
-//unchanged array:
-Show_magicians(newArray);
+console.log("Original magicians:")
 
+Show_magicians(magician_names);
 
-
+console.log("great magicians:")
+Show_magicians(greatMagicians);
 
 
 
 //QUESTION 44:
 // Sandwiches: Write a function that accepts a array of items a person wants on a sandwich. The function should have one parameter that collects as many items as the function call provides, and it should print a summary of the sandwich that is being ordered. Call the function three times, using a different number of arguments each time.
 
-function makeSandwich(...ingredients: string[]) {
+function makeSandwich(...ingredients: string[]) : void{
     if (ingredients.length === 0) {
       console.log("You ordered a plain sandwich.");
     } else {
